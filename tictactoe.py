@@ -31,12 +31,11 @@ class TicTacToe:
         """Checks the board list for valid win combinations
         """
         for win in self.wins:
-            first_val = self.board[win[0]]
-            if first_val == "-":
+            win_values = [self.board[e] for e in win]
+            if "-" in win_values:
                 continue
-            if first_val == self.board[win[1]] and first_val == self.board[win[2]]:
-                print("Found win in indicies: {}".format(win))
-                return first_val
+            if len(set(iter(win_values))) <= 1:
+                return win_values[0]
         return None
 
     def print_board(self):
