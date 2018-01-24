@@ -4,7 +4,9 @@
 Players take turns by marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
 
 ## Usage
-```python3 tictactoe.py```
+```shell
+python3 tictactoe.py
+```
 
 First, select the token for the first player. The only two tokens allowed are "X" and "O".
 ```shell
