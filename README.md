@@ -6,9 +6,16 @@ Players take turns by marking the spaces in a 3×3 grid. The player who succeeds
 ## Usage
 ```python3 tictactoe.py```
 
-Make a move by typing player,position when prompted (eg., X,0 or O,4) where the position is the row major index of the 3x3 board. 
-
+First, select the token for the first player. The only two tokens allowed are "X" and "O".
+```shell
+Which player goes first? (X,O): 
 ```
+Then, each player takes turn entering positions cooresponding to their move on the 3x3 board.
+```shell
+Player X's turn! Choose a location (0-8):
+```
+
+```shell
 0 1 2
 3 4 5
 6 7 8
@@ -16,37 +23,44 @@ Make a move by typing player,position when prompted (eg., X,0 or O,4) where the 
 
 ## Example
 ```shell
-➜  tictactoe git:(master) python3 tictactoe.py
-Make a play (eg, X,5) X,4
-Player X plays position: 4
+tictactoe: python3 tictactoe.py
+Which player goes first? (X,O) X
+Player X's turn! Choose a location (0-8): 4
 Current board:
 - - -
 - X -
 - - -
-Make a play (eg, X,5) O,2
-Player O plays position: 2
+Player O's turn! Choose a location (0-8): 6
 Current board:
-- - O
-- X -
 - - -
-Make a play (eg, X,5) X,1
-Player X plays position: 1
-Current board:
-- X O
-- X -
-- - -
-Make a play (eg, X,5) O,6
-Player O plays position: 6
-Current board:
-- X O
 - X -
 O - -
-Make a play (eg, X,5) X,7
-Player X plays position: 7
+Player X's turn! Choose a location (0-8): 2
 Current board:
-- X O
+- - X
 - X -
+O - -
+Player O's turn! Choose a location (0-8): 5
+Current board:
+- - X
+- X O
+O - -
+Player X's turn! Choose a location (0-8): 7
+Current board:
+- - X
+- X O
 O X -
-Found win in indicies: [1, 4, 7]
+Player O's turn! Choose a location (0-8): 2
+Position 2 already played by X
+Player O's turn! Choose a location (0-8): 0
+Current board:
+O - X
+- X O
+O X -
+Player X's turn! Choose a location (0-8): 1
+Current board:
+O X X
+- X O
+O X -
 Player X wins!
 ```
